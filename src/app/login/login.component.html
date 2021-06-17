@@ -1,0 +1,38 @@
+<section>
+<div class="global-container" id="center_login">
+	<div class="card login-form">
+	<div class="card-body">
+		<h1 class="card-title text-center">Connexion</h1>
+		<div class="card-text">
+			
+			<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+				<div class="form-group">
+					<label for="exampleInputEmail1">Username</label>
+					<input type="text" required formControlName="username" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" required formControlName="password" class="form-control form-control-sm" id="exampleInputPassword1">
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="exampleInputPassword1">Fonction</label>
+					<select name="role" required formControlName="role" class="form-control form-control-sm" id="exampleInputPassword2">
+						<option>Employe</option>
+						<option>Administrateur</option>
+					</select>
+				</div>
+				<br>
+				<button  class="btn btn-primary btn-block">Valider</button>
+				<div class="sign-up">
+					Vous n'avez pas de compte ? <a routerLink="/register">Créer Compte</a>
+				</div>
+
+			
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+</section>

@@ -1,0 +1,44 @@
+<section id="register">
+    <div class="container" id="content">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+          <div class="row">
+            <div class="col text-center">
+              <h1>Créer Nouveau Compte</h1>
+            </div>
+          </div>
+          <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+            <div class="row align-items-center mt-4">
+              <div class="col">
+                <input type="text" name="nom" formControlName="nom" class="form-control" placeholder="Nom">
+              </div>
+              <div class="col">
+                <input type="text" name="prenom" formControlName="prenom" class="form-control" placeholder="Prenom">
+              </div>
+            </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="username" name="username" formControlName="username" class="form-control" placeholder="Username">
+            </div>
+            <div class="col">
+              <input type="role" name="role" formControlName="role" class="form-control" placeholder="Rôle">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="password" name="password" formControlName="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="col">
+              <input type="password" name="confirm" formControlName="confirm" class="form-control" placeholder="Confirm Password">
+            </div>
+          </div>
+          <div class="row justify-content-start mt-4">
+            <div class="col">
+                <button class="btn btn-primary mt-4">Soumettre</button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

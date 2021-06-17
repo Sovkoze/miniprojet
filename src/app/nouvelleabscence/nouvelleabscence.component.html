@@ -1,0 +1,59 @@
+<section id="register">
+    <div class="container" id="content">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+          <div class="row">
+            <div class="col text-center">
+              <h1>Créer Nouvelle Demande</h1>
+            </div>
+          </div>
+          <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+            <div class="row align-items-center mt-4">
+              <div class="col">
+                  <label>Date debut</label>
+                <input type="date" name="date_debut" formControlName="date_debut" class="form-control" placeholder="Date Debut">
+              </div>
+              <div class="col">
+                <label>Date Fin</label>
+                <input type="date" name="date_fin" formControlName="date_fin" class="form-control" placeholder="Date Fin">
+              </div>
+            </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+                <label>Type Abscence</label>
+             <select name="typ_abs" class="form-control" formControlName="typ_abs">
+                 <option>Journalier</option>
+                 <option>Hebdomadaire</option>
+                 <option>Mensuel</option>
+                 <option>Trimestre</option>
+                 <option>Semestriel</option>
+                 <option>Annuel</option>
+             </select>
+            </div>
+            <!--<div class="col">
+                <label>Etat Abscence</label>
+                <select name="abscence_etat" class="form-control" formControlName="abscence_etat">
+                    <option>En Attente</option>
+                    <option>Acceptée</option>
+                    <option>Refusée</option>
+                </select>            
+            </div>-->
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+                <textarea name="motif_abscence" formControlName="motif_abscence" class="form-control"
+                rows="4" cols="10" style="width: 100%;">
+                </textarea>
+            </div>
+          
+          </div>
+          <div class="row justify-content-start mt-4">
+            <div class="col">
+                <button class="btn btn-primary mt-4">Soumettre</button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

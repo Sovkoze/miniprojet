@@ -1,0 +1,63 @@
+<section>
+    <div class="container" id="header" >
+   <div class="card-deck">
+    <div class="card my-3">	
+       <div class="row">
+           <div class="col-md-10">
+               <br>
+            <h3 id="title"><i class='fa fa-bell'></i>
+                Liste des Abscences</h3>
+                <h6 id="name">{{nom}}</h6>
+           </div>
+           <div class="col-md-2" id="pos">
+               <br>
+              <!-- btn-outline-primary -->
+            <a id="" routerLink="/" class="btn ">
+                <img src="{{this.image}}" id="img_" /> <br>Deconnexion</a>
+           </div>
+       </div>
+   </div>
+   </div>
+    </div>
+    <hr>
+
+    <div class="container">
+            <div class="card-deck">
+                
+                <div class="card my-3">	
+                    <div class="row">
+                        <div class="col-md-3" >
+                            <a id="btn_add"  routerLink="/abscences/nouvelleabscence/{{id}}" class="btn btn-outline-primary">Nouvelle Demande</a>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-header">
+                            <H6 style="text-align:right">SOLDE DES ABSCENCES</H6>  
+                            </div>
+                            <div class="card-body" id="abs">
+                                <div class="row" >
+                                    <div class="col-md-4">
+                                        Demandes Acquises
+                                        <br>
+                                        {{this.solde_abscence.count2}}
+                                    </div>
+                                    <div class="col-md-4">
+                                        Demandes Rejetées
+                                        <br>
+                                        {{this.solde_abscence.count3}}
+                                    </div>
+                                    <div class="col-md-4">
+                                        Demande En Cours
+                                        <br>
+                                        {{this.solde_abscence.count1}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+
+</section>
